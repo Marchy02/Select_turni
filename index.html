@@ -36,7 +36,6 @@
             font-weight: 700;
             text-align: center;
             margin-bottom: 16px;
-            letter-spacing: 0.5px;
         }
 
         h2 {
@@ -85,12 +84,6 @@
         .btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
-            background: linear-gradient(135deg, #FB8C00 0%, #F57C00 100%);
-        }
-
-        .btn:active {
-            transform: translateY(0);
-            box-shadow: 0 4px 12px rgba(255, 152, 0, 0.3);
         }
 
         .note {
@@ -106,6 +99,22 @@
             border-left: 4px solid #FFB74D;
         }
 
+        .note-important {
+            text-align: center;
+            font-size: 17px;
+            color: #5D4037;
+            line-height: 1.9;
+            margin-top: 35px;
+            margin-bottom: 35px;
+            padding: 22px 20px;
+            background-color: #FFF3E0;
+            border-radius: 14px;
+            border: 2px solid #FFB74D;
+            box-shadow: 0 4px 10px rgba(255, 152, 0, 0.18);
+            font-weight: 700;
+        }
+
+
         @media (max-width: 480px) {
 
             body {
@@ -119,31 +128,32 @@
 
             h1 {
                 font-size: 24px;
-                margin-bottom: 12px;
             }
 
             h2 {
                 font-size: 18px;
-                margin-bottom: 24px;
             }
 
             .intro-text {
                 font-size: 16px;
-                margin-bottom: 30px;
             }
 
             .btn {
                 font-size: 16px;
                 padding: 22px 20px;
-                border-radius: 14px;
                 line-height: 1.6;
             }
 
             .note {
                 font-size: 14px;
                 padding: 18px;
-                line-height: 1.8;
             }
+
+            .note-important {
+                font-size: 16px;
+                padding: 20px 16px;
+            }
+
 
             .button-container {
                 gap: 20px;
@@ -158,7 +168,7 @@
     <h1>Iscrizioni Campeggi Estivi 2026</h1>
     <h2>Parrocchia di Montorso e Zermeghedo</h2>
 
-    <p class="note">
+    <p class="note-important">
         Le iscrizioni saranno attraverso la compilazione del seguente modulo online a cui si potrà accedere dal
         16 gennaio dalle ore 20:00 fino al 30 gennaio alle ore 20:00.
     </p>
