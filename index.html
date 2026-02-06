@@ -114,7 +114,6 @@
             font-weight: 700;
         }
 
-
         @media (max-width: 480px) {
 
             body {
@@ -154,23 +153,38 @@
                 padding: 20px 16px;
             }
 
-
             .button-container {
                 gap: 20px;
             }
         }
     </style>
 </head>
+
 <body>
 
-<div class="container">
+<!-- BLOCCO CHIUSO -->
+<div class="container" id="closed">
+
+    <h1>Iscrizioni Campeggi Estivi 2026</h1>
+
+    <p class="note-important">
+        ⛔ Le iscrizioni non sono attive in questo momento.<br><br>
+        Apertura: 11 Febbraio 2026 – ore 20:00<br>
+        Chiusura: 18 Febbraio 2026 – ore 20:00
+    </p>
+
+</div>
+
+
+<!-- BLOCCO APERTO -->
+<div class="container" id="open" style="display:none;">
 
     <h1>Iscrizioni Campeggi Estivi 2026</h1>
     <h2>Parrocchia di Montorso e Zermeghedo</h2>
 
     <p class="note-important">
-        Le iscrizioni saranno attraverso la compilazione del modulo online a cui si 
-        potrà accedere dal 11 febbraio dalle ore 20:00 fino al 18 febbraio alle ore 20:00
+        Le iscrizioni sono attive dal 11 febbraio ore 20:00
+        fino al 18 febbraio ore 20:00
     </p>
 
     <p class="intro-text">Seleziona il turno per cui sei interessato</p>
@@ -195,11 +209,33 @@
     </div>
 
     <p class="note">
-        I posti sono limitati per ogni turno. Al raggiungimento del numero massimo il modulo verrà chiuso automaticamente
-        e sarà possibile iscriversi alla lista d'attesa.
+        I posti sono limitati. Al raggiungimento del massimo
+        il modulo verrà chiuso automaticamente.
     </p>
 
 </div>
+
+
+<!-- SCRIPT CONTROLLO DATE -->
+<script>
+
+    // APERTURA: 11 Febbraio 2026 - 20:00
+    const openDate = new Date(2026, 1, 11, 20, 0);
+
+    // CHIUSURA: 18 Febbraio 2026 - 20:00
+    const closeDate = new Date(2026, 1, 18, 20, 0);
+
+    const now = new Date();
+
+    if (now >= openDate && now <= closeDate) {
+        document.getElementById("closed").style.display = "none";
+        document.getElementById("open").style.display = "block";
+    } else {
+        document.getElementById("closed").style.display = "block";
+        document.getElementById("open").style.display = "none";
+    }
+
+</script>
 
 </body>
 </html>
